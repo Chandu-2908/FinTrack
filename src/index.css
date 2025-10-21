@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 150 30% 98%;
+    --foreground: 160 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 15% 20%;
+
+    /* Mint Green Primary */
+    --primary: 160 65% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 160 70% 75%;
+
+    /* Coral Accent */
+    --secondary: 15 85% 70%;
+    --secondary-foreground: 160 15% 20%;
+
+    /* Lavender Muted */
+    --muted: 260 40% 95%;
+    --muted-foreground: 160 10% 45%;
+
+    /* Lavender Accent */
+    --accent: 260 60% 75%;
+    --accent-foreground: 160 15% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 20% 90%;
+    --input: 160 20% 95%;
+    --ring: 160 65% 55%;
+
+    --radius: 1rem;
+
+    /* Custom Gradients */
+    --gradient-mint: linear-gradient(135deg, hsl(160 65% 55%) 0%, hsl(160 70% 75%) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(15 85% 70%) 0%, hsl(25 85% 75%) 100%);
+    --gradient-lavender: linear-gradient(135deg, hsl(260 60% 75%) 0%, hsl(270 50% 85%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(150 30% 98%) 0%, hsl(160 25% 96%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(160 40% 70% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(160 40% 60% / 0.2);
+    --shadow-hover: 0 12px 40px -10px hsl(160 50% 50% / 0.25);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 160 15% 12%;
+    --foreground: 150 20% 95%;
+
+    --card: 160 12% 15%;
+    --card-foreground: 150 20% 95%;
+
+    --popover: 160 12% 15%;
+    --popover-foreground: 150 20% 95%;
+
+    /* Mint Green Primary - darker for dark mode */
+    --primary: 160 60% 50%;
+    --primary-foreground: 160 15% 12%;
+    --primary-glow: 160 65% 65%;
+
+    /* Coral Accent - adjusted for dark mode */
+    --secondary: 15 75% 60%;
+    --secondary-foreground: 160 15% 12%;
+
+    /* Lavender Muted - dark mode */
+    --muted: 160 10% 20%;
+    --muted-foreground: 150 15% 65%;
+
+    /* Lavender Accent - dark mode */
+    --accent: 260 50% 60%;
+    --accent-foreground: 150 20% 95%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 150 20% 95%;
+
+    --border: 160 12% 25%;
+    --input: 160 12% 20%;
+    --ring: 160 60% 50%;
+
+    /* Dark Mode Gradients */
+    --gradient-mint: linear-gradient(135deg, hsl(160 60% 50%) 0%, hsl(160 65% 65%) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(15 75% 60%) 0%, hsl(25 75% 65%) 100%);
+    --gradient-lavender: linear-gradient(135deg, hsl(260 50% 60%) 0%, hsl(270 45% 70%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(160 15% 12%) 0%, hsl(160 12% 15%) 100%);
+
+    /* Dark Mode Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.4);
+    --shadow-hover: 0 12px 40px -10px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

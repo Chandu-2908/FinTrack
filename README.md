@@ -29,6 +29,6 @@ Animations          framer-motion
 👥 Authors
 
 Made by:
-Chandu Veeramalla
-Akash Ravula
+Chandu Veeramalla,
+Akash Ravula,
 Krishna Vamshi Nelluri
